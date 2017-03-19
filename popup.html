@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LMPopup</title>
+
+    <link rel="stylesheet" href="styles/css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"
+            integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+            crossorigin="anonymous"></script>
+
+    <script>
+        //Vanilla JavaScript
+        var popUp = "popup";
+
+        function openPopup() {
+            document.getElementById(popUp).style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById(popUp).style.display = "none";
+        }
+    </script>
+
+    <script>
+        //Using jQuery
+        function togglePopup() {
+            $("#popup-2").toggleClass('show');
+        }
+    </script>
+</head>
+<body>
+
+<button type="button" onclick="openPopup()">Open popup with JS</button>
+<button type="button" onclick="togglePopup()">Open popup with jQuery</button>
+
+<!-- POPUP BASIC STRUCTURE -->
+<div class="popup" id="popup">
+    <div class="popup-background"></div>
+
+    <div class="popup-container">
+        <div class="popup-close" onclick="closePopup()">
+            <!-- I use material icons but you can use whatever you want -->
+            <i class="material-icons">&#xE145;</i>
+        </div>
+
+        <div class="popup-content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis in metus at euismod.
+                Pellentesque in mattis leo. Integer elementum mattis libero, sed sodales tortor blandit ac. Proin semper
+                orci neque, eget tempus libero posuere eget. Mauris vulputate aliquam lectus, et blandit dui vulputate
+                eget. Mauris tempor convallis hendrerit. Nulla lectus lectus, semper quis pellentesque a, consectetur
+                sed enim. Integer eget eros vestibulum, eleifend ipsum a, varius ligula. Donec non elementum eros. Nam
+                tincidunt metus dui, et ornare erat sollicitudin ac. Aliquam porttitor facilisis dapibus.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- END POPUP BASIC STRUCTURE -->
+
+<div class="popup" id="popup-2">
+    <div class="popup-background"></div>
+
+    <div class="popup-container">
+        <div class="popup-close" onclick="togglePopup()">
+            <!-- I use material icons but you can use whatever you want -->
+            <i class="material-icons">&#xE145;</i>
+        </div>
+
+        <div class="popup-content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis in metus at euismod.
+                Pellentesque in mattis leo. Integer elementum mattis libero, sed sodales tortor blandit ac. Proin semper
+                orci neque, eget tempus libero posuere eget. Mauris vulputate aliquam lectus, et blandit dui vulputate
+                eget. Mauris tempor convallis hendrerit. Nulla lectus lectus, semper quis pellentesque a, consectetur
+                sed enim. Integer eget eros vestibulum, eleifend ipsum a, varius ligula. Donec non elementum eros. Nam
+                tincidunt metus dui, et ornare erat sollicitudin ac. Aliquam porttitor facilisis dapibus.
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
